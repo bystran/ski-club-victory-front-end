@@ -1,0 +1,91 @@
+@import '../../app.scss';
+
+
+.home-section-2{
+    padding:100px 0px;
+    width: 95%;
+    margin: 0px auto; 
+    .section-2-text{
+        p{
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    }
+    .perk-list{
+        margin-bottom: 55px;
+        .perk-box{
+            font-size: 15px;
+            padding-top: 20px;
+            svg{
+                height: 50px;
+            }
+        }
+    }
+    .link-btn{
+        margin-left: 15px;
+    }
+    @include mq ( 'tablet' ){
+        width:700px;
+        margin: 0px;
+        padding-left: 50px;
+        .perk-list{
+            .perk-box{
+                width: 600px;
+            }
+        }
+    }
+    @include mq ( 'tablet-wide' ){
+        width: 100%;
+        padding: 120px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .section-2-text{
+            padding: 0px;
+            flex-basis: 500px;
+            padding-bottom: 180px;
+            padding-right: 20px;
+        }
+        .perk-list{
+            padding-left: 20px;
+            width: 400px;
+            .perk-box{
+                svg{
+                    height: 30px;
+                }
+                width: 100%;
+            }
+        }
+    }
+    @include mq ( 'desktop' ) {
+        .section-2-text{
+            padding-right: 50px;
+            padding-bottom: 100px;
+        }
+        .perk-list{
+            width: 650px;
+            .perk-box{
+                height: auto;
+                width: 648px;
+                display: flex;
+                justify-content: center;
+                svg{
+                    padding-top:20px;
+                    padding-right: 20px;
+                    height: auto; 
+                    width: 80px;
+                }
+                .perk-icon{
+                    height: min-content;
+                }
+            }
+        }
+    }
+    @include mq( 'desktop-wide' ){
+        .section-2-text{
+            flex-basis: 600px;
+            padding-right: 120px;
+        }
+    }
+}
