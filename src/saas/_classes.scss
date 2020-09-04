@@ -1,0 +1,18 @@
+@import 'variables';
+
+.link-btn{
+    transition: all .1s;
+    border-radius: 16.5px;
+    background: #4dedff;
+    display: inline;
+    font-size: 16px;
+    color:#2C3E50;
+    text-decoration:none;
+    white-space: nowrap;
+    padding:2px 33px;
+    &:hover{
+        padding:2px 40px;
+        -webkit-filter: grayscale(100%)saturate(0%);
+        filter: grayscale(100%) saturate(0%);
+    }
+}
