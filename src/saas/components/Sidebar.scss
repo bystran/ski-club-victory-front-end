@@ -2,6 +2,7 @@
 
 
 nav.side-bar{ 
+    box-shadow: -3px 3px 18px rgba(0, 0, 0, 0.20);
     transition: height 0.35s, width 0.35s;
     position:fixed;
     top: 0; 
@@ -20,6 +21,7 @@ nav.side-bar{
     align-content: center;
     border-radius: 0px 0px 0px 20px;
     .close-button{
+        z-index: 1000000;
         background: $primary-color;
         position: absolute;
         top: 25px;
@@ -35,7 +37,7 @@ nav.side-bar{
             padding-right:2px;
         }
     }
-    .logo{
+    .logo-side-bar{
 
        position: absolute;
        top:0;

@@ -8,25 +8,21 @@ import NewMemberIcon from '../assets/icons/new_member_icon.svg';
 import CloseIcon from '../assets/icons/close_icon.svg';
 import '../saas/components/Sidebar.scss';
 
-const Sidebar = () => {
-    const [ hidden, setHidden ] = useState(false)
-    const handleClick = (e) => {
-        if(e.target.nodeName !== 'NAV'){
-            setHidden(true)
-        }
-    }
+const Sidebar = ({ className, handleClick}) => {
 
     return (
         <nav 
-            className={`side-bar ${ hidden && 'hidden'}`}
-            onClick={handleClick}    
+            className={`side-bar ${className}`}  
         >   
-            <div className='close-button'>
+            <div 
+                className='close-button'
+                onClick={handleClick}  
+            >
                 <CloseIcon />
             </div>
             <Link
                 to="/"
-                className="logo"
+                className="logo-side-bar"
             >
                 <Logo  /> 
             </Link>

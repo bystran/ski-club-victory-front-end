@@ -1,0 +1,85 @@
+@import '../app.scss';
+
+
+header.page-header{
+    z-index:1000;
+    position: fixed; 
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    background:white;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    a.logo{
+        display: block;
+        padding-right: 70px;
+        svg{
+            height: 40px;   
+            width: auto; 
+        }
+    }
+    .mobile-menu-icon{
+        height: 60px;
+        background: rgba(37, 61, 128, 0.1);
+        position: absolute;
+        right: 20px;
+        width:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            width:18px;
+            height: auto;
+            path{
+                fill: $primary-color;
+            }
+
+        }
+    
+    }
+    @include mq( 'tablet' ) {
+        height: 90px;
+        justify-content: flex-start;
+        box-shadow: none;
+        .mobile-menu-icon{
+            display: none;
+        }
+        a.logo{
+            height: 90px;
+            padding:0px 40px;
+            border-right: 1px solid lightgray;
+            display: flex;
+            align-items: center;
+            svg{
+                height: 50px;
+            }
+        }
+        .header-gradient-border{
+            z-index:999;
+            position: absolute;
+            bottom:-5px;
+            height: 5px;
+            width: 100%;
+            background:$gradient;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15); 
+        }
+    }
+    @include mq ( 'tablet-wide' ) {
+        a.logo{
+            padding:0px 60px;
+        }
+    }
+    @include mq ( 'desktop' ) {
+        height: 100px;
+        a.logo {
+            height: 100px;
+            padding:0px 65px;
+            svg{
+                height: 53px;
+            }
+        }
+    } 
+}

@@ -2,3 +2,13 @@
 @import 'elements';
 @import 'classes';
 
+.layout-content{
+    margin: 0px;
+    padding-top: 60px;
+    @include mq ( 'tablet' ) {
+        padding-top: 90px
+    }
+    @include mq ( 'desktop' ) {
+        padding-top: 100px;
+    }
+}
