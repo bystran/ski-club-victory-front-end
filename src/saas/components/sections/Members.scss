@@ -1,0 +1,51 @@
+@import '../../app.scss';
+
+
+.members-section{
+    
+    padding: 70px 0px;
+    padding-bottom:100px;
+    position: relative;
+    .member-card{
+        width: 95%;
+
+    }
+    .slick-arrow {
+        position: absolute;
+        bottom: -60px;
+        height: 28px; 
+        width: auto;
+        right: 3%;
+    }
+    .slick-prev{
+        padding-right: 50px;
+    }
+    h1{
+        width:100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    div.button-row{
+        padding-top: 36px;
+        padding-left: 3%;
+    }
+    @include mq('phone'){
+        padding: 80px 0px;
+        padding-bottom:130px;
+        h1{
+            margin-bottom: 70px;
+        }
+    }
+    @include mq('phone-wide'){
+        .slick-arrow{
+            right: 30px;
+        }
+        .button-row{
+            text-align: right;
+            padding-right: 140px;
+        }
+    }
+    @include mq('desktop'){
+        padding-bottom: 180px;
+    }
+}

@@ -17,7 +17,7 @@ const Section2 = () => {
                     Lyžiarsky klub Victory je jedným z bratislavských
                     lyžiarskych oddielov. Venuje sa športovej a lyžiarskej 
                     príprave <span className='accent-1'>detí a mládeže vo 
-                    veku 5 - 15 rokov</span>. Tréningový proces je 
+                    veku 3 - 15 rokov</span>. Tréningový proces je 
                     zameraný nielen na samotnú <span className='accent-1'>
                     lyžiarsku prípravu, </span> ale aj rozvoj kondície, 
                     koordinácie, obratnosti, rovnováhy,
