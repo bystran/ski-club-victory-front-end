@@ -34,7 +34,7 @@ module.exports = {
       options: {
         apiURL: `http://104.248.27.11`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`clen`,],
+        contentTypes: [`clen`, `uspech`],
         //If using single types place them in this array.
         singleTypes: [`domov-prva-stranka`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).

@@ -1,0 +1,116 @@
+@import '../../app.scss';
+
+
+.fame-card{
+    background: $darker-blue;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+    padding-bottom: 30px;
+    width: 389px;
+    box-shadow: 0px 8px 7px rgba(37, 61, 128, 0.31);
+
+    h2{
+        text-align: center;
+        width:100%;
+        font-family: $heading-font;
+        font-weight: bolder;
+        
+    }
+    h3 , h4 {
+        color: #BBBBBB;
+        text-align: center;
+        width: 100%;
+        font-family: $heading-font;
+    }
+
+}
+.fame-card.trophy{
+    margin: 15px;
+    svg{
+        width: 90px;
+        margin-top: -40px;
+    }
+    h2{
+        font-size: 22px;
+        padding-top: 3px;
+        padding-bottom: 13px;
+    }
+    h3, h4{
+        font-size: 18px;
+    }
+}
+
+
+.hall-of-fame{
+    padding: 70px 0px;
+    padding-bottom:100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .hall-of-fame-velky-holder{
+        padding-top: 80px; 
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 50px; 
+        .fame-card{
+            width: 270px;
+            h2, h3, h4 {
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+    .hall-of-fame-maly-holder{
+        width: 100%;
+        padding: 0px;
+        margin: auto;
+        .fame-card{
+            width: 85%; 
+            height: 130px;
+            margin-top: 10px;
+            svg{
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+            h2{
+                font-size: 18px;
+            }
+            h3, h4{
+                font-size: 14px;
+            }
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        bottom: -60px;
+        height: 28px; 
+        width: auto;
+        right: 3%;
+    }
+    .slick-prev{
+        padding-right: 50px;
+    }
+    @include mq('phone'){
+        padding: 80px 0px;
+        padding-bottom:130px;
+    }
+    @include mq('phone-wide'){
+        .slick-arrow{
+            right: 30px;
+        }
+        .button-row{
+            text-align: right;
+            padding-right: 140px;
+        }
+    }
+    @include mq('desktop'){
+        padding-bottom: 220px;
+    }
+
+}
