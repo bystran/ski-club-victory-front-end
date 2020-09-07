@@ -8,16 +8,21 @@ import SectionOne from "../components/sections/domov/section-1";
 import MembersSection from "../components/sections/members";
 import HallOfFame from "../components/sections/hall-of-fame";
 import BecomeMember from "../components/sections/domov/become-member.js"
+import ContactSection from "../components/sections/contact"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+
     
     <SectionOne />
     <SectionTwo />
     <MembersSection />
     <HallOfFame />
     <BecomeMember />
+    <ContactSection />
+    
+    
    
     
 
