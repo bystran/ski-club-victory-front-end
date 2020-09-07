@@ -12,7 +12,7 @@ const LinkButton = (props) => {
   };
 
   return (
-    <Link href={href}
+    <Link to={href}
       style={style}
       className="link-btn"
     >

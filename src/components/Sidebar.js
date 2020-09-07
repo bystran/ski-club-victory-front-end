@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import SocialLinks from '../constants/socialLinks';
 import Logo from '../assets/icons/Logo.svg';
@@ -10,6 +10,12 @@ import '../saas/components/Sidebar.scss';
 
 const Sidebar = ({ className, handleClick}) => {
 
+    const handleKeyToClick = e => {
+        if(e.code === 'Esc'){
+            handleClick(e);
+        }
+    }
+
     return (
         <nav 
             className={`side-bar ${className}`}  
@@ -17,6 +23,9 @@ const Sidebar = ({ className, handleClick}) => {
             <div 
                 className='close-button'
                 onClick={handleClick}  
+                role="button"
+                tabIndex="0"
+                onKeyPress={handleKeyToClick}
             >
                 <CloseIcon />
             </div>

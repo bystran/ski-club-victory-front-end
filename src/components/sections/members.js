@@ -73,6 +73,7 @@ const Members = () => {
                 {
                     nodes.map( node => 
                       <MemberCard 
+                          key={node.Slug}
                           image = {node.Profilova_fotka.childImageSharp.fluid} 
                           name = {node.Meno}
                       />
