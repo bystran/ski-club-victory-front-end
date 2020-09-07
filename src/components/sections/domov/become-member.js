@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 import '../../../saas/components/sections/BecomeMember.scss';
 import LinkButton from '../../LinkButton';
 import CheckIcon from '../../../assets/icons/check.svg';
+import Decoration from '../../../assets/icons/decoration.svg';
 
 
 const query = graphql`
@@ -33,9 +34,11 @@ const BecomeMember = () => {
         <div className="become-member-section">
             <BackgroundImage 
                 fluid={page.obrazok.img.fluid}
-                className='left-col'>a</BackgroundImage>
+                className='left-col'>
+                <Decoration />
+            </BackgroundImage>
             <div className='right-col'>
-
+                <div className='right-col-content'>
                 <h1>{ page.heading }</h1>
                 <p> { page.text }</p>
                 <div className='benefits'>
@@ -59,6 +62,7 @@ const BecomeMember = () => {
                 >
                     Zavolajte nám
                 </LinkButton>
+                </div>
 
             </div>
         </div>
