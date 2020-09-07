@@ -1,0 +1,92 @@
+@import '../../app.scss';
+
+
+.become-member-section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    
+    .left-col{
+        height: 300px;
+        width: 100%;;
+    }
+    .right-col{
+        box-shadow: 3px 0px 18px rgba(0, 0, 0, 0.20);
+        position: relative;
+        z-index: 2;
+        width: 260px;
+        padding: 30px 15px;
+        background: white;
+        margin:auto;
+        margin-top: -40px;
+        background: #F5F5F5;
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+        .link-btn{
+            display: block;
+            width: fit-content;
+            background: $accent-color-2;
+            margin: 10px auto;
+            margin-top: 40px;
+        }
+        .benefit{
+            padding-top:4px;
+            svg{
+                padding-right: 15px;
+            }
+        }
+    }
+    @include mq('phone'){
+        .right-col{
+            width: 280px;
+        }
+    }
+    @include mq('tablet'){
+        margin-top: 200px;
+        align-items: center;
+        h1{
+            padding-bottom: 10px;
+        }
+        .left-col{
+            
+            height: auto;
+            padding-bottom: 35%;
+            width: 70%;
+        }
+        .right-col{
+            position: absolute;
+            right: 3%;
+        }
+    }
+    @include mq('tablet-wide'){
+        justify-content: center;
+        
+        .left-col{
+            
+            margin:0px;
+            width: 50%;
+            padding-bottom: 38%;
+            
+        }
+        .right-col{
+            position:relative;
+            width: 320px;
+            padding: 40px ;
+            margin: 0px;
+            height: 100%;
+            
+        }
+    }
+    @include mq('desktop'){
+        .left-col{
+            width: 70%;
+        }
+        .right-col{
+            width: 25%;
+            padding: 40px 2%;
+
+        }
+    }
+}

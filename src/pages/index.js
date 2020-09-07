@@ -7,15 +7,17 @@ import SectionTwo from "../components/sections/domov/section-2";
 import SectionOne from "../components/sections/domov/section-1";
 import MembersSection from "../components/sections/members";
 import HallOfFame from "../components/sections/hall-of-fame";
+import BecomeMember from "../components/sections/domov/become-member.js"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    
+    <BecomeMember />
     <SectionOne />
     <SectionTwo />
     <MembersSection />
     <HallOfFame />
+   
     
 
   </Layout>
