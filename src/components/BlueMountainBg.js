@@ -9,7 +9,7 @@ const query = graphql`
         file(name: {eq: "montains-bg"}) {
             name
             img:childImageSharp {
-              fluid {
+              fluid (maxWidth: 1920) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }

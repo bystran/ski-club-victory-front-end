@@ -13,7 +13,7 @@ const query = graphql`
       mainImgs: VelkeObrazky {
         Image {
           img: childImageSharp {
-            fluid {
+            fluid (maxWidth: 1920) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -23,7 +23,7 @@ const query = graphql`
       h1: nadpisVelky
       sideImg: obrazokPravaStrana {
         img: childImageSharp {
-          fluid {
+          fluid (maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }

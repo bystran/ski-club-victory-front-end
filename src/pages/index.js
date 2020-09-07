@@ -12,11 +12,12 @@ import BecomeMember from "../components/sections/domov/become-member.js"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <BecomeMember />
+    
     <SectionOne />
     <SectionTwo />
     <MembersSection />
     <HallOfFame />
+    <BecomeMember />
    
     
 
