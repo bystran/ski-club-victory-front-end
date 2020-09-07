@@ -1,0 +1,186 @@
+@import '../../app.scss';
+
+
+.home-section-one{
+    display:flex;
+    flex-wrap:wrap;
+    .section-1-left-side{
+        position: relative;
+        height:80vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        .decoration{
+            position: absolute;
+            width:30px;
+            right: -15px;
+            bottom: 0px;
+            transform: scaleX(-1);
+            z-index: 100;
+        }
+        .slick-slider{
+            z-index: -10;
+            position: absolute;
+            top: 0px;
+            height: 100%;
+            width: 100%;
+            .slick-list, .slick-track, .slide-bg, div{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        h1, h2, .link-btn{
+            z-index: 10;
+            margin-left: 20px;
+        }
+        h1{
+            padding-bottom: 20px;
+        }
+        .link-btn{
+            font-size: 16px;
+            margin-top:10px;
+        }
+    }
+    .section-1-left-side, .section-1-right-side {
+        width: 100%;
+    }   
+    .section-1-right-side{
+        color: white;
+        padding-top:3vh;
+        padding-bottom: 20vh;
+        display:flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        h3,h4,h5{
+            width: 100%;
+            text-align: center;
+        }
+        h5{
+            font-weight: lighter;
+            font-size:70px;
+            margin:0px;
+        }
+        h4{
+            font-size:27px;
+            margin-top:-22px;
+
+        }
+        h3{
+            font-size: 30px;
+            text-transform: uppercase;
+            font-family: $heading-font;
+            font-weight: bolder;
+        }
+        .link-btn{
+            display: block;
+            height: fit-content;
+            margin-top: 30px;
+        }
+
+
+    }
+    .section-1-right-side, .section-1-right-side::before,
+    .section-1-right-side::after{
+        background-position: center center !important;
+        background-size: 200% !important;
+
+    }
+    @include mq('phone-wide'){
+        .section-1-left-side{
+            height: 100vh;
+        }
+    }
+    @include mq('tablet'){
+        .section-1-left-side{
+            height: 350px;
+            width: 70%;
+            .decoration{
+                width:20px;
+                right: -10px;
+                bottom: 0px;
+                transform: scaleX(1);
+                z-index: 100;
+            }
+            h1{
+                font-size: 30px;
+                width: 100%;
+            }
+        }
+        .section-1-right-side{
+            width:30%;
+            padding:0px;
+            padding-top:50px;
+            height: 300px;
+        }
+        .section-1-right-side, .section-1-right-side::before,
+        .section-1-right-side::after{
+            background-position: center 0px !important;
+            background-size: 280% !important;
+    
+        }
+
+    }
+    @include mq( 'tablet-wide' ) {
+        .section-1-left-side{
+            height: 550px;
+            width: 70%;
+            .decoration{
+                width:30px;
+                right: -10px;
+            }
+            h1{
+                font-size: 30px;
+                width: 100%;
+            }
+        }
+        .section-1-right-side{
+            width:30%;
+            padding:0px;
+            padding-top:150px;
+            height: 400px;
+        }
+        .section-1-right-side, .section-1-right-side::before,
+        .section-1-right-side::after{
+            background-position: center 0px !important;
+            background-size: 280% !important;
+    
+        }
+    }
+    @include mq( 'desktop' ){
+        .section-1-left-side{
+            height: 662px;
+            width: 70%;
+            .decoration{
+                width:35px;
+                right: -12px;
+                top:20%;
+            }
+            h1{
+                font-size: 45px;
+                width: 70%;
+                margin-right: 30%;
+            }
+            h1, h2, .link-btn{
+                z-index: 10;
+                margin-left: 50px;
+            }
+        }
+        .section-1-right-side{
+            padding-top:150px;
+            height: 512px;
+            h5{
+                font-size: 100px;
+            }
+            h4{
+                margin-top: -30px;
+                font-size: 38px;
+            }
+            h3{
+                font-size: 45px;
+            }
+        }
+        
+    }
+}

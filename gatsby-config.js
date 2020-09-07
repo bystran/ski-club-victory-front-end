@@ -36,7 +36,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         contentTypes: [`clen`,],
         //If using single types place them in this array.
-        //singleTypes: [`home-page`, `contact`],
+        singleTypes: [`domov-prva-stranka`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
       },
     },
