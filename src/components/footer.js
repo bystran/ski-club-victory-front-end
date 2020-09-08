@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/icons/logo.svg';
+import Logo from '../assets/icons/Logo.svg';
 import { graphql, useStaticQuery } from 'gatsby';
 import SocialLinks from '../constants/socialLinks';
 import NavLinks from '../constants/navLinks';

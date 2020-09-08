@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useStaticQuery, grapql } from 'gatsby';  
+import { useStaticQuery, graphql } from 'gatsby';  
 import ReactPlayer from 'react-player'
 
 
