@@ -5,9 +5,8 @@
         display: none;
     }
     .larger-svg{
-        rect{
-           fill: rgba(173, 208, 54, 0.82);
-            
+        rect:first-of-type{
+            display: none;
         }
     }
     .txt-col{

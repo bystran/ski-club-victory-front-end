@@ -53,6 +53,10 @@
         justify-content: center;
         align-content: flex-start;
         flex-wrap: wrap;
+        width: 85%;
+        margin:auto;
+        margin-top: -50px;
+        box-shadow: 3px 0px 18px rgba(0, 0, 0, 0.20);
         h3,h4,h5{
             width: 100%;
             text-align: center;
@@ -83,8 +87,8 @@
     }
     .section-1-right-side, .section-1-right-side::before,
     .section-1-right-side::after{
-        background-position: center center !important;
-        background-size: 200% !important;
+        background-position: 42% 20% !important;
+        background-size: 300% !important;
 
     }
     @include mq('phone-wide'){
@@ -111,6 +115,8 @@
         .section-1-right-side{
             width:30%;
             padding:0px;
+            margin: 0px;
+            box-shadow: none;
             padding-top:50px;
             height: 300px;
         }

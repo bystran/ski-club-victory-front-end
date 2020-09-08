@@ -23,6 +23,7 @@
     }
     .link-btn{
         margin-left: 15px;
+        display: none;
     }
     @include mq ( 'tablet' ){
         width:700px;
@@ -33,6 +34,7 @@
                 width: 600px;
             }
         }
+
     }
     @include mq ( 'tablet-wide' ){
         width: 100%;
@@ -56,6 +58,10 @@
                 }
                 width: 100%;
             }
+        }
+        .link-btn{
+            display: initial;
+            margin: 0px;
         }
     }
     @include mq ( 'desktop' ) {

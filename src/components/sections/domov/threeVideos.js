@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player'
 
 import '../../../saas/components/sections/HomeThreeVideos.scss';
 import LinkButton from '../../LinkButton';
-import GreenStripe from '../../../assets/icons/rectangle_green.svg';
+import Decoration from '../../../assets/icons/decoration.svg';
 import BlueStripe from '../../../assets/icons/rectangle_blue.svg';
 
 
@@ -39,7 +39,7 @@ const ThreeVideos = () => {
     return (
         <div className="section-3-videos">
             <BlueStripe className='smaller-svg'/>
-            <GreenStripe className='larger-svg'/>
+            <Decoration className='larger-svg'/>
             
             
             <div className="txt-col">
