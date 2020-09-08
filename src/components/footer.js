@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../assets/icons/Logo.svg';
 import { graphql, useStaticQuery } from 'gatsby';
 import SocialLinks from '../constants/socialLinks';
-import NavLinks from '../constants/navLinks';
+import Links from '../constants/navlinks';
 import '../saas/components/Footer.scss';
 
 const query = graphql`
@@ -30,11 +30,11 @@ const Footer = () => {
             </div>
             <nav className='col page-nav'>
                 <h3> Lyžiarsky klub </h3>
-                <NavLinks />
+                <Links />
             </nav>
             <nav className='col page-nav page-nav-2'>
                 <h3>Domov</h3>
-                <NavLinks />
+                <Links />
             </nav>
             <div className='col kontakt-1'>
                 <h3>Kontakt</h3>
