@@ -9,6 +9,7 @@ import MembersSection from "../components/sections/members";
 import HallOfFame from "../components/sections/hall-of-fame";
 import BecomeMember from "../components/sections/domov/become-member.js"
 import ContactSection from "../components/sections/contact"
+import ThreeVideos from "../components/sections/domov/threeVideos";
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <SectionOne />
     <SectionTwo />
     <MembersSection />
+    <ThreeVideos />
     <HallOfFame />
     <BecomeMember />
     <ContactSection />
