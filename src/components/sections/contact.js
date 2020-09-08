@@ -44,7 +44,7 @@ const query = graphql`
 
 const Contact = () => {
     const {contact:{firma, email, telefon, people, foto}} = useStaticQuery(query);
-    console.log(useStaticQuery(query));
+
     return (
         <div className="contatct-section">
             <BackgroundImage 
