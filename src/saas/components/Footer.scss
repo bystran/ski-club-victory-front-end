@@ -1,0 +1,92 @@
+@import '../app';
+
+
+
+footer.page-footer{
+    font-size: 13px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+    ul{
+        list-style: none;
+        padding: 0px;
+        li{
+            a{
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+    .row-1{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+        svg.logo{
+            margin: 0px 30px;
+            width: 200px;
+        }
+        ul{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            svg{
+                padding-right: 10px;
+                height: 25px;
+                width: auto;
+            }
+        }
+    }
+    .col{
+        ul{
+            margin-top: 0px;
+        }
+        font-size: 13px;
+        h3{
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        width: 46%;
+        padding: 1%;
+        .contact-person{
+            h3{
+                margin-bottom: 0px;
+            }
+            p{
+                margin: 3px 0px;;
+            }
+            padding-bottom: 5px;
+        }
+    }
+    .row-bot{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    @include mq('phone'){
+        .col{
+            width: 150px;
+            
+        }
+    }
+    @include mq('tablet'){
+        font-size: 13px;
+        justify-content: center;
+        .row-1{
+            justify-content: space-evenly;
+            
+        }
+        .col , .col h3{
+            font-size: 16px;
+        }
+        .col{
+            width: 180px;
+        }
+    }
+
+}
