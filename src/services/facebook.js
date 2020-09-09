@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = "http://localhost:1337/facebook-posts" 
+const url = "http://104.248.27.11/facebook-posts"
 
 const fetch_fb_data = async () => {
     const res = await axios.get(url);
