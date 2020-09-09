@@ -10,6 +10,8 @@ import HallOfFame from "../components/sections/hall-of-fame";
 import BecomeMember from "../components/sections/domov/become-member.js"
 import ContactSection from "../components/sections/contact"
 import ThreeVideos from "../components/sections/domov/threeVideos";
+import News from '../components/sections/domov/news';
+import LazyLoad from 'react-lazy-load';
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +20,11 @@ const IndexPage = () => (
     
     <SectionOne />
     <SectionTwo />
+    <LazyLoad 
+      className='lazy-load-news-wrapper'
+    >
+      <News />
+    </LazyLoad>
     <MembersSection />
     <ThreeVideos />
     <HallOfFame />
