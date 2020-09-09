@@ -11,6 +11,7 @@ import BecomeMember from "../components/sections/domov/become-member.js"
 import ContactSection from "../components/sections/contact"
 import ThreeVideos from "../components/sections/domov/threeVideos";
 import News from '../components/sections/domov/news';
+import Gallery from '../components/sections/Gallery';
 import LazyLoad from 'react-lazy-load';
 
 const IndexPage = () => {
@@ -20,7 +21,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
 
-      
+   
       <SectionOne />
       <SectionTwo />
       <LazyLoad 
@@ -33,6 +34,9 @@ const IndexPage = () => {
       <HallOfFame />
       <BecomeMember />
       <ContactSection />
+      <LazyLoad>
+        <Gallery />
+      </LazyLoad>
       
       
     
