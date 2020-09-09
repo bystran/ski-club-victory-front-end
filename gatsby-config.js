@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://104.248.27.11`,
+        apiURL: `https://victory.srworld.sk`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`clen`, `uspech`],
         //If using single types place them in this array.

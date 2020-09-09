@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = "http://104.248.27.11/facebook-posts"
+const url = "https://victory.srworld.sk/"
 
 const fetch_fb_data = async () => {
     const res = await axios.get(url);
