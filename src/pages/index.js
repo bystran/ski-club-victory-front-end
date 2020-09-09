@@ -13,29 +13,37 @@ import ThreeVideos from "../components/sections/domov/threeVideos";
 import News from '../components/sections/domov/news';
 import LazyLoad from 'react-lazy-load';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+const IndexPage = () => {
+ 
 
-    
-    <SectionOne />
-    <SectionTwo />
-    <LazyLoad 
-      className='lazy-load-news-wrapper'
-    >
-      <News />
-    </LazyLoad>
-    <MembersSection />
-    <ThreeVideos />
-    <HallOfFame />
-    <BecomeMember />
-    <ContactSection />
-    
-    
-   
-    
+  return (
+    <Layout>
+      <SEO title="Home" />
 
-  </Layout>
-)
+      
+      <SectionOne />
+      <SectionTwo />
+      <LazyLoad 
+        className='lazy-load-news-wrapper'
+      >
+        <News />
+      </LazyLoad>
+      <MembersSection />
+      <ThreeVideos />
+      <HallOfFame />
+      <BecomeMember />
+      <ContactSection />
+      
+      
+    
+      
+
+    </Layout>
+  )
+ 
+
+}
+
+
 
 export default IndexPage

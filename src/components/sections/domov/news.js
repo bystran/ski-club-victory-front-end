@@ -1,5 +1,5 @@
-import React ,{ useState, useEffect } from 'react';
-import getFbData from '../../../services/facebook';
+import React from 'react';
+import useFacebookData from '../../../hooks/useFacebookData';
 import moment from 'moment/min/moment-with-locales';
 import '../../../saas/components/sections/News.scss';
 import FbIcon from '../../../assets/icons/awe-fb.svg';
@@ -40,16 +40,7 @@ const NewsCard = (props) =>{
 }
 
 const News = () => {
-    const [ fbData, setFbData ] = useState(null)
-    useEffect(()=>{
-        const fetchData = async () => {
-            const result = await getFbData()
-            console.log(result)
-            setFbData(result);
-          };
-       
-        fetchData();
-    }, [])
+    const fbData = useFacebookData();
     return (
         <div className="news-section">
             <h1><span className='accent-color'>Novinky</span> Victory</h1>
