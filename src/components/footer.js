@@ -30,10 +30,10 @@ const Footer = () => {
             </div>
             <nav className='col page-nav'>
                 <h3> Lyžiarsky klub </h3>
-                <Links />
+                <p>Lyžiarsky klub Victory je jedným z bratislavských lyžiarskych oddielov. Venuje sa športovej a lyžiarskej príprave detí a mládeže</p>
             </nav>
             <nav className='col page-nav page-nav-2'>
-                <h3>Domov</h3>
+                <h3>Prekliky</h3>
                 <Links />
             </nav>
             <div className='col kontakt-1'>

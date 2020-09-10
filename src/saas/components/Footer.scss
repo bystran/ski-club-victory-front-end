@@ -14,7 +14,9 @@ footer.page-footer{
     ul{
         list-style: none;
         padding: 0px;
+       
         li{
+            padding-top: 5px;
             a{
                 text-decoration: none;
                 color: $primary-color;
@@ -61,6 +63,12 @@ footer.page-footer{
                 margin: 3px 0px;;
             }
             padding-bottom: 5px;
+        }
+    }
+    .kontakt-2{
+        .info{
+            padding-top: 5px;
+            font-size: 16px;
         }
     }
     .row-bot{

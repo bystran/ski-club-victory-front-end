@@ -34,7 +34,9 @@ const IndexPage = () => {
       <HallOfFame />
       <BecomeMember />
       <ContactSection />
-      <LazyLoad>
+      <LazyLoad
+        className='lazy-load-news-wrapper'
+      >
         <Gallery />
       </LazyLoad>
       

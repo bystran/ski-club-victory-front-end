@@ -46,7 +46,9 @@ const ThreeVideos = () => {
               <h2>{subheading}</h2>
               <h1>{heading}</h1>
               <p>{text}</p>
-              <LinkButton>
+              <LinkButton
+                href='/#stan-sa-clenom'
+              >
                 Pridaj sa
               </LinkButton>
             </div>

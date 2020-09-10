@@ -25,7 +25,7 @@ const Section2 = () => {
                 </p>
 
                 <LinkButton
-                    href=""
+                    href="/o-nas"
                 >
                     Zisti viacej
                 </LinkButton>

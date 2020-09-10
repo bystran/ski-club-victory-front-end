@@ -26,7 +26,7 @@ const Gallery = () => {
     }
     const imgs = getImgs()
     return (
-        <div className='gallery-section'>
+        <div className='gallery-section' id='galeria'>
             <BlueStripe className='smaller-svg'/>
             <Decoration className='larger-svg'/>
             <h1>Galéria</h1>

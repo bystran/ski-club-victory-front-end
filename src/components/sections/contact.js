@@ -54,11 +54,11 @@ const Contact = () => {
                 <Decoration />
 
             </BackgroundImage>
-            <div className="info-col">
+            <div className="info-col" id='kontakt'>
                 <h1>Kontakt</h1>
                 <div className='info'>
                     <PlaceIcon />
-                    <address className='company text'>
+                    <address className='company text' >
                         <h3>{firma.Nazov}</h3>
                         <p>{firma.Ulica}</p>
                         <p>{`${firma.PSC} ${firma.Mesto}`}</p>

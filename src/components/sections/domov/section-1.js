@@ -72,8 +72,11 @@ const SectinoOne = () => {
                 </Slick>
                 <h2 className='white'>{h2}</h2>
                 <h1 className='white'>{h1}</h1>
-                <LinkButton>Zistite viac</LinkButton>
                 <LinkButton
+                    href='/o-nas'
+                >Zistite viac</LinkButton>
+                <LinkButton
+                    href="/#stan-sa-clenom"
                     background="rgba(37, 61, 128, 0.59)"
                 >Staň sa členom</LinkButton>
             </div>

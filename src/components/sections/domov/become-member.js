@@ -37,11 +37,11 @@ const BecomeMember = () => {
                 className='left-col'>
                 <Decoration />
             </BackgroundImage>
-            <div className='right-col'>
+            <div className='right-col' id='stan-sa-clenom'>
                 <div className='right-col-content'>
                 <h1>{ page.heading }</h1>
                 <p> { page.text }</p>
-                <div className='benefits'>
+                <div className='benefits' >
                     
                     
                         { page.Benefit.map( b => 

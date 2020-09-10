@@ -49,7 +49,7 @@ const Sidebar = ({ className, handleClick}) => {
             <SocialLinks />
             <div className="phone-num">
                 <PhoneIcon />
-                <span>+421 999 999 999</span>    
+                <span>+421 903 759 842</span>    
             </div> 
         </nav>
     )

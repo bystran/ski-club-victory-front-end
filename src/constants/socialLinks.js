@@ -8,12 +8,12 @@ const links = [
     {
         id: 1,
         icon: <Facebook />,
-        href: 'http://facebook.com',
+        href: 'http://facebook.com/skiclubvictory',
     },
     {
         id: 2,
         icon: <Instagram />,
-        href: 'https://instagram.com',
+        href: 'https://instagram.com/skiclubvictory',
     },
     {
         id: 3,

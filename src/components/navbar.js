@@ -17,7 +17,7 @@ const navbar = () => {
                 
                 <div className="phone-num">
                     <PhoneIcon />
-                    <span>+421 999 999 999</span>    
+                    <span>+421 903 759 842</span>    
                 </div>
             </div>
             <nav className='bottom-nav-bar'>

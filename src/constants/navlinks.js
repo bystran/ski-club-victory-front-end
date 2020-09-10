@@ -20,7 +20,7 @@ const links = [
     {
         id: 4,
         text: 'Galéria',
-        href: '/galeria',
+        href: '/#galeria',
     },
     {
         id: 5,

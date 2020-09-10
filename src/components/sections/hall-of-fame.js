@@ -74,7 +74,7 @@ const HallOfFame = () => {
         <BlueMtnBg 
             className='hall-of-fame'
         >
-            <h1 className="white">Sieň Slávy</h1>
+            <h1 className="white" id="sien-slavy">Sieň Slávy</h1>
             <div className="hall-of-fame-velky-holder">
                 {
                     nodes.filter(node => node.Level === 'velky')
