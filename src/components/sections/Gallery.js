@@ -1,7 +1,7 @@
 import React from 'react'
 import useFacebookData from '../../hooks/useFacebookData';
 import ImageGallery from 'react-image-gallery';
-import BlueMtBg from '../BlueMountainBg';
+
 
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../../saas/components/sections/Gallery.scss";

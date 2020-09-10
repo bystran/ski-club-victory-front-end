@@ -1,0 +1,77 @@
+@import '../app.scss';
+
+
+.members-page{
+    background: #f5f5f5;
+    
+    .members-header{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+        ul.members-summary{
+            
+            width: 100%;
+            padding: 0px ;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            li{
+                font-size: 14px;
+                h3{
+                    color: $accent-color;
+                    font-size: 14px;
+                }
+                p{
+                    font-weight: bolder;
+                }
+                padding: 5px;
+            }
+        }
+        
+    }   
+    .members-part{
+        background:$primary-color;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+        .members-container{
+            width: 80%;
+            margin: auto;
+            top: -30px;
+            position: relative;
+            .member-card{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @include mq('tablet-small'){
+        .members-part{
+            .members-container{
+                width: 620px;
+                display: flex;
+                flex-wrap: wrap;
+                .member-card{
+                    width: 300px;
+                    padding: 5px 5px;
+                }
+            }
+        }
+    }
+    @include mq('tablet-wide'){
+        .members-part{
+            .members-container{
+                width: 930px;
+            }
+        }
+    }
+    @include mq('desktop'){
+        .members-header{
+            display: flex;
+            padding: 150px 0px; 
+            padding-bottom: 170px;
+        }
+    }
+}
