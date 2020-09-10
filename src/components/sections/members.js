@@ -76,6 +76,7 @@ const Members = () => {
                           key={node.Slug}
                           image = {node.Profilova_fotka.childImageSharp.fluid} 
                           name = {node.Meno}
+                          slug={node.Slug}
                       />
                   )
                 }
