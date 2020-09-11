@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Lyžiarsky club victory`,
+    title: `Victory Lyžiarsky klub`,
     description: `Lyžiarsky klub Victory je jedným z bratislavských lyžiarskych oddielov. Venuje sa športovej a lyžiarskej príprave detí a mládeže`,
     author: `Adam Bystran`,
   },

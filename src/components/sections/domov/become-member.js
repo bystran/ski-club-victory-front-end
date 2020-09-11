@@ -45,7 +45,7 @@ const BecomeMember = () => {
                     
                     
                         { page.Benefit.map( b => 
-                            <div className='benefit'>
+                            <div className='benefit' key={b.id}>
                                 <CheckIcon />
                                 <span>
                                 { b.Benefit }

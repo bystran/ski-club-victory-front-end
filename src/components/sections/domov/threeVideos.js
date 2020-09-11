@@ -16,6 +16,7 @@ const query = graphql`
       text
       heading: velkyText
       vids: videa {
+        id
         video {
           publicURL
         }
@@ -54,7 +55,7 @@ const ThreeVideos = () => {
             </div>
             <div className="vids-col">
               {
-                vids.map( vid => <ReactPlayer className="three-vids-video" 
+                vids.map( vid => <ReactPlayer key={vid.id} className="three-vids-video" 
                   stopOnUnmount url={vid.video.publicURL}
                   light={vid.thumbnail.img.fluid.src} 
                   playing muted

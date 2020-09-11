@@ -13,6 +13,7 @@ const query = graphql`
 {
     home1: strapiDomovPrvaStranka {
       mainImgs: VelkeObrazky {
+        id
         Image {
           img: childImageSharp {
             fluid (maxWidth: 1920) {
@@ -24,6 +25,7 @@ const query = graphql`
       h2: nadpisMensi
       h1: nadpisVelky
       sideImg: obrazokPravaStrana {
+        
         img: childImageSharp {
           fluid (maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -64,6 +66,7 @@ const SectinoOne = () => {
                 <Slick {...slickSettings}>
                     {mainImgs.map(img=>
                             <BackgroundImage
+                                key={img.id}
                                 fluid={applyBlueFilter(img.Image.img.fluid)}
                                 className='slide-bg'
                             >

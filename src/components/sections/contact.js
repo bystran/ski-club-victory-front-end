@@ -84,7 +84,7 @@ const Contact = () => {
                     <div className="text contact-people">
                         {
                             people.map( person => 
-                                <div className="contact-person">
+                                <div className="contact-person" key={person.id}>
                                     <h3>{person.meno}</h3>
                                     <p>{person.telefon}</p>
                                 </div>    
