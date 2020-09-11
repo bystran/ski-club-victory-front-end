@@ -58,8 +58,8 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
                       lazyLoad={true}
                       items={gallery.map(item=>{
                         return {
-                          original: "https://victory.srworld.sk"+item.url,
-                          thumbnail: "https://victory.srworld.sk"+item.url,
+                          original: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                          thumbnail: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
                         }
                       })}
                     />
