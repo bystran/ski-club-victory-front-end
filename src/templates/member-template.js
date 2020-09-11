@@ -10,8 +10,11 @@ import '../saas/pages/member.scss';
 
 moment.locale("sk");
 
-
 const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
+
+    
+
+
     return (
         <Layout>
             <div className='member-page'>
@@ -23,7 +26,7 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
                     <ul className="facts">
                         <li>
                             <h3>Vek</h3>
-                            <p>{moment(birth_date).fromNow(true)}</p> 
+                            <p>{`${moment().diff(birth_date, 'years', false)} r.`}</p> 
                         </li>
                         {
                             bits.map( fact =>
