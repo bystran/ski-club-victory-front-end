@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.838" height="25" viewBox="0 0 24.838 25">
+  <g id="place" transform="translate(-276.323 -9504)">
+    <path id="Icon_awesome-circle" data-name="Icon awesome-circle" d="M11.822.563a11.26,11.26,0,1,0,11.259,11.26A11.258,11.258,0,0,0,11.822.563Z" transform="translate(275.761 9503.438)" fill="#add036"/>
+    <path id="Icon_material-place" data-name="Icon material-place" d="M15.081,3A7.575,7.575,0,0,0,7.5,10.581c0,5.686,7.581,14.079,7.581,14.079s7.581-8.393,7.581-14.079A7.575,7.575,0,0,0,15.081,3Zm0,10.288a2.707,2.707,0,1,1,2.707-2.707A2.708,2.708,0,0,1,15.081,13.288Z" transform="translate(278.5 9504.341)" fill="#253d80"/>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+@import '../../app.scss';
+
+
+.become-member-section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    
+    .left-col{
+        height: 300px;
+        width: 100%;
+        svg{
+            width: 38px;
+        }
+    }
+    .right-col{
+        box-shadow: 3px 0px 18px rgba(0, 0, 0, 0.20);
+        position: relative;
+        z-index: 2;
+        width: 260px;
+        padding: 30px 15px;
+        background: white;
+        margin:auto;
+        margin-top: -40px;
+        background: #F5F5F5;
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+        .link-btn{
+            display: block;
+            width: fit-content;
+            background: $accent-color-2;
+            margin: 10px auto;
+            margin-top: 40px;
+        }
+        .benefit{
+            padding-top:4px;
+            svg{
+                padding-right: 15px;
+            }
+        }
+    }
+    @include mq('phone'){
+        .right-col{
+            width: 280px;
+        }
+    }
+    @include mq('tablet'){
+        padding-bottom: 0px;
+        align-items: center;
+        .right-col{
+            position: relative;
+            box-shadow: none;
+            width: 45%;
+            padding: 100px 5%;
+            margin-top:0px;
+
+        }
+        .left-col{
+            width: 45%;
+            height: 0;
+            padding-bottom: 50%;
+            svg{
+                position: absolute;
+                transform: scale(1);
+                right:-8px;
+                z-index: 10000;
+                
+            }
+        }
+    }
+    @include mq('tablet-wide'){
+        height: 550px;
+        .right-col{
+            .right-col-content{
+                margin: auto;
+            }
+            display: flex;
+            position: relative;
+            box-shadow: none;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            width: 50%;
+            padding: 0px 0px;
+            margin-bottom: 0px;
+            height: 100%;
+            h1, p, .benefits{
+                width: 350px;
+                margin:auto;
+            }
+            p{
+
+                padding: 20px 0px;
+            }
+            
+        }
+        .left-col{
+            width: 50%;
+            height: 100%;
+            padding-bottom:0px;
+        }
+    }
+}

@@ -12,13 +12,11 @@ const LinkButton = (props) => {
   };
 
   return (
-    <Link href={href}>
-      <span
-        style={style}
-        className="link-btn"
-      >
-        {children}
-      </span>
+    <Link to={href}
+      style={style}
+      className="link-btn"
+    >
+      {children}
     </Link>
   );
 };

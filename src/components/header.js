@@ -29,6 +29,9 @@ const Header = ({ siteTitle }) => {
         </div>
         <div className='mobile-menu-icon'
           onClick={handleClick}
+          tabIndex="0"
+          role="button"
+          onKeyPress={handleClick}
         >
           <MenuIcon />
         </div>

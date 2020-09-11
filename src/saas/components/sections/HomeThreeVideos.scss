@@ -1,0 +1,85 @@
+@import '../../app'; 
+
+.section-3-videos{
+    svg{
+        display: none;
+    }
+    .larger-svg{
+        rect:first-of-type{
+            display: none;
+        }
+    }
+    .txt-col{
+        padding:100px 2%;
+        padding-bottom: 70px;
+        .link-btn{
+            display:none;
+        }
+    }
+    .vids-col{
+        
+        .three-vids-video{
+            width: 100% !important;
+            //padding-bottom:50.25%;
+            height: fit-content !important;
+        }
+        .react-player__preview{
+            height: 0px;
+            padding-bottom: 52.25%;
+            display: flex;
+            align-items: center;
+            position:relative;
+            .react-player__shadow{
+                position:absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .react-player__play-icon{
+                &:hover{
+                    border-color: transparent transparent transparent $primary-color;
+                }
+            }
+        }
+    }
+    @include mq( 'tablet' ){
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        position:relative;
+        svg{
+            width: 28px;
+            display: initial;
+            position: absolute;
+        }
+        .larger-svg{
+            left: 0px;
+            top: 20px;
+        }
+        .smaller-svg{
+            bottom: 20%;
+            left: 58.3%;
+        }
+        .vids-col{
+            width: 30%;
+        }
+        .txt-col{
+            width: 40%;
+            height: fit-content;
+            padding: 0px;
+            .link-btn{
+                display: initial;
+            }
+            p{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    @include mq('desktop') {
+        .txt-col{
+            p{
+                width: 480px;
+            }
+        }
+    }
+}

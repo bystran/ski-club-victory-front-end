@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.009" height="26" viewBox="0 0 34.009 26">
+  <g id="email" transform="translate(-274.323 -9715)">
+    <path id="Icon_awesome-circle" data-name="Icon awesome-circle" d="M11.822.563a11.26,11.26,0,1,0,11.259,11.26A11.258,11.258,0,0,0,11.822.563Z" transform="translate(273.761 9714.438)" fill="#add036"/>
+    <path id="Icon_material-email" data-name="Icon material-email" d="M23.784,6H5.309a2.306,2.306,0,0,0-2.3,2.309L3,22.165a2.316,2.316,0,0,0,2.309,2.309H23.784a2.316,2.316,0,0,0,2.309-2.309V8.309A2.316,2.316,0,0,0,23.784,6Zm0,4.619-9.237,5.773L5.309,10.619V8.309l9.237,5.773,9.237-5.773Z" transform="translate(282.24 9716.525)" fill="#253d80"/>
+  </g>
+</svg>

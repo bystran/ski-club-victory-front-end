@@ -1,0 +1,200 @@
+@import '../../app.scss';
+
+
+.news-card{
+    width: 280px;
+    box-shadow: 3px 0px 18px rgba(0, 0, 0, 0.20);
+    font-size: 16px;
+    margin:0px;
+    background: white;
+    .img{
+        width: 100%;
+        padding-bottom: 50%;
+        background-position: center center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 5px;
+        .news-tag{
+            font-size: 12px;
+            color: white;
+            background: $primary-color;
+            margin: 5px;
+            padding: 2px 15px;
+            border-radius: 18px;
+        }
+    }
+    .text{
+        padding: 0px 10px;
+        height: 84px;
+        padding-bottom: 15px;
+        position: relative;
+        p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            line-height: 1.5;        /* fallback */
+            max-height: 3;       /* fallback */
+        }
+        .bottom-row-text{
+            position: absolute;
+            bottom: 10px;
+            width: 90%;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                color: $accent-color-2;
+                text-decoration: none;
+                &::after{
+                    content: '>';
+                    font-size: 13px;
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+}
+.news-section{
+    padding-top: 70px ;
+    padding-bottom: 100px;
+    h1{
+        padding-bottom: 30px;
+        padding-left: 20px
+    }
+    .content-holder{
+        .left-news-holder{
+
+            margin: auto;
+            width: 280px;
+            .news-card{
+                margin-bottom: 20px;
+            }
+        }
+        .right-side-holder{
+            width: 99%;
+            margin:auto;
+            .foto-tyzdna{
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+                .ht{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+
+            }
+            a{
+                text-decoration: none;
+            }
+            .social-net-box{
+                
+                width: 100%;
+                height: 60px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    padding-right: 10px;
+                    height: 30px;
+                }
+            }
+            .fb{
+                background: linear-gradient(to right, #5b97ff 0%, #131f40 100%);
+
+            }
+            .insta{
+                background: linear-gradient(to left, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+                
+
+            }
+        }
+    }
+    @include mq("phone"){
+        .content-holder{
+            .right-side-holder{
+                width: 95%;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            }
+        }
+    }
+    @include mq("phone-wide"){
+        .content-holder{
+            .left-news-holder{
+                width: 540px;
+                display: flex;
+                flex-wrap: wrap;
+                .news-card{
+                    width: 260px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+            }
+            .right-side-holder{
+                width: 530px
+            }
+        }
+        h1{
+
+            padding-left: 8%
+        }
+    }
+    @include mq("tablet"){
+        .content-holder{
+            .left-news-holder{
+                width: 560px;
+                
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        .content-holder{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            .right-side-holder{
+                width: 450px;
+                margin: 0px;
+                position: sticky;
+            }
+        }
+        padding-bottom: 200px;
+        padding-top: 100px;
+        h1{
+            padding-bottom: 50px;
+            padding-left: 8%
+        }
+    }
+    @include mq('desktop'){
+        .content-holder{
+            .left-news-holder{
+                width: 810px;
+            }
+            .right-side-holder{
+                .foto-tyzdna{
+                    padding: 0px;
+                    height: 442px;
+                }
+            }
+        }
+    }
+
+  
+}
+.lazy-load-news-wrapper{
+    
+    height: 2000px;
+    background: #f5f5f5;
+}
+.lazy-load-news-wrapper.is-visible{
+    height: fit-content;
+
+}
