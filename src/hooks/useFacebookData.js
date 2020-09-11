@@ -4,7 +4,7 @@ import getFbData from '../services/facebook';
 const loadLocalStorageData = () => {
     const data = JSON.parse(localStorage.getItem('fbdata'))
 
-    if (data && data.saved_on && data.saved_on - Date.now() < 3600000){
+    if (data && data.saved_on && Date.now() - data.saved_on < 3600000){
         console.log("yay")
         return data;
     }

@@ -75,7 +75,7 @@ const News = () => {
                             
                         > 
                             <span className="ht">#fotkatyzdna</span>
-                        </div>: 'Loading ...'
+                        </div>: ''
                     }
                     <a href="http://facebook.com/skiclubvictory">
                         <div className="social-net-box fb"><span>Sledujte Náš FB </span><FbIcon /></div>

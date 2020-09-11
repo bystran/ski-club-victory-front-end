@@ -1,5 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
+import moment from 'moment/min/moment-with-locales';
 import Layout from '../components/layout';
 import BlueMtBG from '../components/BlueMountainBg';
 import MemberCard from '../components/MemberCard';
@@ -7,8 +8,10 @@ import Gallery from 'react-image-gallery';
 
 import '../saas/pages/member.scss';
 
+moment.locale("sk");
 
-const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, Slug}}}) => {
+
+const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
     return (
         <Layout>
             <div className='member-page'>
@@ -18,6 +21,10 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
                 <div className="left-col-member">
                     <h1>{name}</h1>
                     <ul className="facts">
+                        <li>
+                            <h3>Vek</h3>
+                            <p>{moment(birth_date).fromNow(true)}</p> 
+                        </li>
                         {
                             bits.map( fact =>
                                 <li key={fact.id}>
@@ -72,6 +79,7 @@ export const query = graphql`
     query GetSingleMember($slug: String) {
         strapiClen(Slug: {eq: $slug}) {
         name: Meno
+        birth_date
         about: OMne
         bits: Infoska {
             heading: Nadpis

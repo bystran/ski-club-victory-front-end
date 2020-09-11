@@ -12,8 +12,9 @@ import BlueMtnBg from '../BlueMountainBg';
 
 const query =  graphql`
 {
-  members:allStrapiClen {
+  members: allStrapiClen(sort: {fields: birth_date, order: ASC})  {
     nodes {
+      birth_date
       Meno
       Slug
       Profilova_fotka {

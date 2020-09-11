@@ -1,8 +1,12 @@
+require('dotenv').config({
+  path: '.env',
+});
+
 module.exports = {
   siteMetadata: {
     title: `Lyžiarsky club victory`,
-    description: `ski club vicotry`,
-    author: `@bystran`,
+    description: `Lyžiarsky klub Victory je jedným z bratislavských lyžiarskych oddielov. Venuje sa športovej a lyžiarskej príprave detí a mládeže`,
+    author: `Adam Bystran`,
   },
   plugins: [
     "gatsby-plugin-react-svg",
@@ -20,20 +24,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Sky Club Victory`,
+        short_name: `Victory`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#253D80`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/victory_icon.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://victory.srworld.sk`,
-        queryLimit: 1000, // Default to 100
+        apiURL: process.env.GATSBY_BACKEND_SERVER,
+        queryLimit: 10000, // Default to 100
         contentTypes: [`clen`, `uspech`],
         //If using single types place them in this array.
         singleTypes: [`domov-prva-stranka`, `domov-stan-sa-viktorakom`, `domov-3-videa`, `kontakt`, `clenovia-stranka`],

@@ -1,11 +1,13 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import moment from 'moment/min/moment-with-locales';
 import BackgroundImage from 'gatsby-background-image';
 import Slick from 'react-slick';
 import LinkButton from '../../LinkButton';
 import Decoration from '../../../assets/icons/decoration.svg';
-
 import '../../../saas/components/sections/HomeOne.scss';
+
+moment.locale("sk");
 
 const query = graphql`
 {
@@ -90,7 +92,7 @@ const SectinoOne = () => {
                     }
                 }
             >
-                <h5 className='white'>22</h5>
+                <h5 className='white'>{moment([1998, 11, 1]).fromNow(true).split(' ')[0]}</h5>
                 <h4 className='white'>rokov</h4>
                 <h3 className='white'>Víťazstiev</h3>
                 <LinkButton
