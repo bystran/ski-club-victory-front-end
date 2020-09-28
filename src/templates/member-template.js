@@ -10,8 +10,11 @@ import '../saas/pages/member.scss';
 
 moment.locale("sk");
 
-
 const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
+
+    
+
+
     return (
         <Layout>
             <div className='member-page'>
@@ -23,7 +26,7 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
                     <ul className="facts">
                         <li>
                             <h3>Vek</h3>
-                            <p>{moment(birth_date).fromNow(true)}</p> 
+                            <p>{`${moment().diff(birth_date, 'years', false)} r.`}</p> 
                         </li>
                         {
                             bits.map( fact =>
@@ -58,8 +61,8 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
                       lazyLoad={true}
                       items={gallery.map(item=>{
                         return {
-                          original: "https://victory.srworld.sk"+item.url,
-                          thumbnail: "https://victory.srworld.sk"+item.url,
+                          original: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                          thumbnail: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
                         }
                       })}
                     />
@@ -79,7 +82,6 @@ export const query = graphql`
     query GetSingleMember($slug: String) {
         strapiClen(Slug: {eq: $slug}) {
         name: Meno
-        birth_date
         about: OMne
         bits: Infoska {
             heading: Nadpis
