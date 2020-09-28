@@ -1,6 +1,7 @@
 import React from 'react'
 import useFacebookData from '../../hooks/useFacebookData';
 import ImageGallery from 'react-image-gallery';
+import ReactPlayer from 'react-player'
 
 
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -11,11 +12,23 @@ import BlueStripe from '../../assets/icons/rectangle_blue.svg';
 const Gallery = () => {
     const fbData = useFacebookData();
     const getImgs = () => {
-        if(fbData && fbData.photos){
-            return fbData.photos.map( photo => {
+        if(fbData && fbData.media){
+            return fbData.media.map( media => {
+                if(media.media.source){
+                    return {
+                        renderItem: () => <ReactPlayer
+                            stopOnUnmount url={media.media.source}
+                            light={media.media.image.src} 
+                            playing muted
+                            controls
+                        />,
+                        thumbnail:media.media.image.src,   
+                        original:media.media.image.src,
+                    }
+                }
                 return {
-                    original:photo.full_picture,
-                    thumbnail:photo.picture      
+                    original:media.media.image.src,
+                    thumbnail:media.media.image.src,     
                 }
             })
             
@@ -31,7 +44,7 @@ const Gallery = () => {
             <Decoration className='larger-svg'/>
             <h1>Galéria</h1>
             <div className="gallery-content">                  
-                <ImageGallery lazyLoad={true} items={imgs} />
+                <ImageGallery lazyLoad={true} items={imgs} showPlayButton={false} />
             </div>
 
             

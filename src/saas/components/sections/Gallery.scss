@@ -24,6 +24,11 @@
     padding:auto;
     padding-top: 50px;
     padding-bottom: 120px;
+    .image-gallery-slide{
+        div{
+            margin: auto;
+        }
+    }
     .image-gallery-thumbnail{
         width: 81px;
         height: 61px;
@@ -31,9 +36,11 @@
             position: relative;
             height: 100%;
             width: 100%;
+            overflow: hidden;
             .image-gallery-thumbnail-image {
                 vertical-align: middle;
                 width: auto;
+
                 line-height: 0;
                 height: 100%;
             }
