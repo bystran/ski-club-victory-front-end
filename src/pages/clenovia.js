@@ -17,9 +17,9 @@ query MyQuery {
       id
     }
   }
-  members: allStrapiClen(sort: {fields: birth_date, order: ASC})  {
+  members: allStrapiClen {
     nodes {
-      birth_date
+     
       Meno
       Slug
       Profilova_fotka {

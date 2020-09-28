@@ -82,7 +82,6 @@ export const query = graphql`
     query GetSingleMember($slug: String) {
         strapiClen(Slug: {eq: $slug}) {
         name: Meno
-        birth_date
         about: OMne
         bits: Infoska {
             heading: Nadpis
