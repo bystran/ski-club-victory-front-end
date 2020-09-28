@@ -5,15 +5,16 @@ import Layout from '../components/layout';
 import BlueMtBG from '../components/BlueMountainBg';
 import MemberCard from '../components/MemberCard';
 import Gallery from 'react-image-gallery';
+import ReactPlayer from 'react-player'
 
 import '../saas/pages/member.scss';
 
 moment.locale("sk");
 
-const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
+const MemberTemplate = ({data:{file,strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
 
     
-
+    console.log(gallery);
 
     return (
         <Layout>
@@ -59,10 +60,25 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
                     <Gallery 
                       className="gallery"
                       lazyLoad={true}
+                      showPlayButton={false}
                       items={gallery.map(item=>{
-                        return {
-                          original: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
-                          thumbnail: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                        if(item.mime.slice(0,5) === 'video'){
+                            return {
+                                original: `${file.publicURL}`,
+                                thumbnail: `${file.publicURL}`,
+                                renderItem: ()=> <ReactPlayer
+                                    stopOnUnmount url={`${process.env.GATSBY_BACKEND_SERVER}${item.url}`}
+                                    light={file.publicURL} 
+                                    playing muted
+                                    controls
+                                />
+
+                            }
+                        }else {
+                            return {
+                                original: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                                thumbnail: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                            }
                         }
                       })}
                     />
@@ -80,6 +96,9 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
 
 export const query = graphql`
     query GetSingleMember($slug: String) {
+        file(relativePath: {eq: "video_default.png"}) {
+            publicURL
+        }
         strapiClen(Slug: {eq: $slug}) {
         name: Meno
         about: OMne
@@ -99,6 +118,7 @@ export const query = graphql`
             mime
         }
         profile: Profilova_fotka {
+            publicURL
             img: childImageSharp {
             fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid_withWebp
@@ -107,6 +127,7 @@ export const query = graphql`
         }
         Slug
         }
+
     }
 `
 
