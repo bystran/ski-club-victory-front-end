@@ -72,7 +72,7 @@ header.page-header{
             padding:0px 60px;
         }
     }
-    @include mq ( 'desktop' ) {
+    @include mq ( 'desktop-wide' ) {
         height: 100px;
         a.logo {
             height: 100px;
