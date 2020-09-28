@@ -24,6 +24,36 @@
     padding:auto;
     padding-top: 50px;
     padding-bottom: 120px;
+    .image-gallery-thumbnail{
+        width: 81px;
+        height: 61px;
+        .image-gallery-thumbnail-inner {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            .image-gallery-thumbnail-image {
+                vertical-align: middle;
+                width: auto;
+                line-height: 0;
+                height: 100%;
+            }
+        }
+    }
+    .image-gallery-image {
+        max-height: 228px !important;
+        @include mq("tablet"){
+            max-height: 290px !important;
+        }
+        @include mq("tablet-wide"){
+            max-height: 350px !important;
+        }
+        @include mq("desktop"){
+            max-height: 400px !important;
+        }
+        @include mq("desktop-wide"){
+            max-height:  530px !important;
+        }
+    }
     .gallery-content{
         width: 95%;
         @include mq("tablet"){
