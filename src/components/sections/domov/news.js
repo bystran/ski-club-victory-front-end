@@ -41,6 +41,7 @@ const NewsCard = (props) =>{
 
 const News = () => {
     const fbData = useFacebookData();
+    console.log(fbData)
     return (
         <div className="news-section">
             <h1><span className='accent-color'>Novinky</span> Victory</h1>

@@ -13,8 +13,6 @@ moment.locale("sk");
 
 const MemberTemplate = ({data:{file,strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
 
-    
-    console.log(gallery);
 
     return (
         <Layout>
@@ -102,6 +100,7 @@ export const query = graphql`
         strapiClen(Slug: {eq: $slug}) {
         name: Meno
         about: OMne
+        birth_date
         bits: Infoska {
             heading: Nadpis
             id
