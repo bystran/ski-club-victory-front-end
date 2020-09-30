@@ -1,8 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { graphql } from 'gatsby';
 import BgImg from 'gatsby-background-image'
 import BecomeMember from '../components/sections/domov/become-member';
-import SienSlavy from '../components/sections/hall-of-fame';
 
 import Members from '../components/sections/members'
 import Layout from "../components/layout"
