@@ -20,7 +20,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title="Domov" />
 
    
       <SectionOne />

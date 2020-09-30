@@ -8,7 +8,7 @@
     @include mq ( 'tablet' ) {
         padding-top: 90px
     }
-    @include mq ( 'desktop' ) {
+    @include mq ( 'desktop-wide' ) {
         padding-top: 100px;
     }
 }
