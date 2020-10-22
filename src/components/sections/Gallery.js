@@ -8,6 +8,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import "../../saas/components/sections/Gallery.scss";
 import Decoration from '../../assets/icons/decoration.svg';
 import BlueStripe from '../../assets/icons/rectangle_blue.svg';
+import BlueMountainBg from '../BlueMountainBg';
 
 const Gallery = () => {
     const fbData = useFacebookData();
@@ -39,16 +40,16 @@ const Gallery = () => {
     }
     const imgs = getImgs()
     return (
-        <div className='gallery-section' id='galeria'>
-            <BlueStripe className='smaller-svg'/>
-            <Decoration className='larger-svg'/>
+        <BlueMountainBg className='gallery-section' id='galeria'>
+            {/* <BlueStripe className='smaller-svg'/>
+            <Decoration className='larger-svg'/> */}
             <h1>Galéria</h1>
             <div className="gallery-content">                  
                 <ImageGallery lazyLoad={true} items={imgs} showPlayButton={false} />
             </div>
 
             
-        </div>
+        </BlueMountainBg>
     )
 }
 
