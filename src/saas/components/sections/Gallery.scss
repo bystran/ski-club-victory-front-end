@@ -2,6 +2,7 @@
 
 
 .gallery-section{
+    color: white;
     position: relative;
     svg.larger-svg, svg.smaller-svg{
         display: none;
@@ -15,6 +16,46 @@
         width: 100%;
         text-align: center;
         margin-bottom: 40px;
+        color: white;
+
+    }
+    .gallery-header-wrp{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul.gallery-header{
+        display: flex;
+        margin: 0px auto 50px auto;
+        padding: 0px;
+        background: $darker-blue;
+        list-style: none;
+        border-radius: 20px;
+        overflow: hidden;
+        color: lightgrey;
+        width: 290px;
+        li{
+            font-size: 16px;
+            padding: 10px 0px;
+            text-align: center;
+            width: 33%;
+            &:hover:not(.active){
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.1);
+                color: white;
+            }
+        }
+        .active{
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        @include mq("phone-wide") {
+            width: 400px;
+        }
+        
 
     }
     background: white;
@@ -47,21 +88,44 @@
         }
     }
     .image-gallery-content:not(.fullscreen){
-    .image-gallery-image {
-        max-height: 228px !important;
-        @include mq("tablet"){
-            max-height: 290px !important;
+        .image-gallery-slide-wrapper{
+            height: 228px;
+            @include mq("tablet"){
+                height: 290px !important;
+            }
+            @include mq("tablet-wide"){
+                height: 350px !important;
+            }
+            @include mq("desktop"){
+                height: 400px !important;
+            }
+            @include mq("desktop-wide"){
+                height:  530px !important;
+            }
         }
-        @include mq("tablet-wide"){
-            max-height: 350px !important;
+        .image-gallery-image, .react-video-slide, .react-player__preview,
+        .react-video-slide div:first-child{
+            max-height: 228px !important;
+            @include mq("tablet"){
+                max-height: 290px !important;
+            }
+            @include mq("tablet-wide"){
+                max-height: 350px !important;
+            }
+            @include mq("desktop"){
+                max-height: 400px !important;
+            }
+            @include mq("desktop-wide"){
+                max-height:  530px !important;
+            }
         }
-        @include mq("desktop"){
-            max-height: 400px !important;
+        .react-video-slide{
+            div:first-child{
+                max-width: 100% !important;
+            }
         }
-        @include mq("desktop-wide"){
-            max-height:  530px !important;
-        }
-    }
+        
+
 }
     .gallery-content{
         width: 95%;
@@ -77,8 +141,12 @@
         }
         @include mq("desktop"){
             width: 730px;
-            padding-top: 50px;
-            padding-bottom: 100px
+            padding-top: 0px;
+            padding-bottom: 100px;
+        }
+        @include mq("desktop-wide"){
+            width: 900px;
+            margin:auto;
         }
 
     }
