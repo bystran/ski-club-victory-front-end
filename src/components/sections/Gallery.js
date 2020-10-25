@@ -86,7 +86,7 @@ const Gallery = () => {
             
         </BlueMountainBg>
         <div className='images-of-the-week-past'>
-            <h1>Archív #fotkatyzdna</h1>
+            <h1>#fotkatyzdna</h1>
             <SimpleImageGallery 
                 images={
                     fbData && fbData.img_of_the_week.map( img => {
