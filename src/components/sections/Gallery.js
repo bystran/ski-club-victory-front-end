@@ -4,8 +4,6 @@ import ImageGallery from 'react-image-gallery';
 import ReactPlayer from 'react-player'
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../../saas/components/sections/Gallery.scss";
-import Decoration from '../../assets/icons/decoration.svg';
-import BlueStripe from '../../assets/icons/rectangle_blue.svg';
 import BlueMountainBg from '../BlueMountainBg';
 import SimpleImageGallery from '../SimpleImageGallery';
 
@@ -54,7 +52,7 @@ const Gallery = () => {
     const imgs = getImgs(filter);
     return (
         <>
-        <BlueMountainBg className='gallery-section' id='galeria'>
+        <BlueMountainBg className='gallery-section'>
             {/* <BlueStripe className='smaller-svg'/>
             <Decoration className='larger-svg'/> */}
             <h1>Galéria</h1>
