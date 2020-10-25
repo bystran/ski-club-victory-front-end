@@ -1,0 +1,30 @@
+@import '../app.scss';
+
+
+.simple-gallery{
+    
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    @include mq("phone-wide"){
+        display: flex;
+        flex-wrap: wrap;
+        img{
+            width: 48%;
+            margin: 1%;
+        }
+    }
+    @include mq("tablet-wide"){
+        img{ 
+            width: 31%;
+        }
+    }
+    @include mq("desktop"){
+        img{
+            width: 23%;
+        }
+    }
+    @include mq("desktop")
+}

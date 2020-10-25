@@ -2,19 +2,19 @@ import React, {useState} from 'react'
 import useFacebookData from '../../hooks/useFacebookData';
 import ImageGallery from 'react-image-gallery';
 import ReactPlayer from 'react-player'
-
-
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../../saas/components/sections/Gallery.scss";
 import Decoration from '../../assets/icons/decoration.svg';
 import BlueStripe from '../../assets/icons/rectangle_blue.svg';
 import BlueMountainBg from '../BlueMountainBg';
+import SimpleImageGallery from '../SimpleImageGallery';
 
 
 
 const Gallery = () => {
     const fbData = useFacebookData();
     const [filter, setFilter] = useState("all"); // one of ["all", "photos", "videos"]
+
     const getImgs = (filterWord) => {
         if(fbData && fbData.media){
             return fbData.media.reduce( (accumulator, media) => {
@@ -87,8 +87,19 @@ const Gallery = () => {
 
             
         </BlueMountainBg>
-        <div className="past-images-of-the-week">
-
+        <div className='images-of-the-week-past'>
+            <h1>Archív #fotkatyzdna</h1>
+            <SimpleImageGallery 
+                images={
+                    fbData && fbData.img_of_the_week.map( img => {
+                        console.log(img);
+                        return {
+                            id: img.id,
+                            src: img.full_picture
+                        }
+                    })
+                }
+            />
         </div>
         </>
     )
