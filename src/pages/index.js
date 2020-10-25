@@ -37,14 +37,15 @@ const IndexPage = () => {
       <HallOfFame />
       <BecomeMember />
       <ContactSection />
-      <LazyLoad
-        offset="500"
-        height="1000"
-        placeholder={<Spinner />}
-        
-      >
-        <Gallery />
-      </LazyLoad>
+      <div id='galeria'>
+        <LazyLoad
+          offset="500"
+          height="1000" 
+        >
+          <Gallery />
+        </LazyLoad>
+      </div>
+
       
       
     
