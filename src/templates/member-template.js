@@ -80,24 +80,29 @@ const MemberTemplate = ({data:{file,strapiClen:{name, about, bits, gallery, prof
             {
                 gallery && gallery.length > 0 &&
                 (
+                    
+                    
                     <div className="member-gallery">
-
-                    <h1>Fotky</h1>
-                    <SimpleGallery 
-                        images={filterPhotos(gallery)}
-                    />
-                    <div className="member-videos">
+                        <div className="member-videos">
+                        {
+                            gallery && filterVidoes(gallery).length > 0 &&
+                            ( <h1>Videá</h1> )  
+                        }
                         {
                             gallery &&
-                            (<h1>Videá</h1> ) &&
                             filterVidoes(gallery).map( vid => 
                                 vid.video    
                             )
-                        }
-                        
+                        }   
                     </div>
+
+                        <h1>Fotky</h1>
+                        <SimpleGallery 
+                            images={filterPhotos(gallery)}
+                        />
+
                     
-            </div>
+                     </div>
                 )
             }
            
