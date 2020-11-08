@@ -12,20 +12,23 @@ import ContactSection from "../components/sections/contact"
 import ThreeVideos from "../components/sections/domov/threeVideos";
 import News from '../components/sections/domov/news';
 import Gallery from '../components/sections/Gallery';
-import LazyLoad from 'react-lazy-load';
+import LazyLoad from 'react-lazyload';
+import Spinner from 'react-spinners/MoonLoader';
 
 const IndexPage = () => {
  
 
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title="Domov" />
 
    
       <SectionOne />
       <SectionTwo />
       <LazyLoad 
-        className='lazy-load-news-wrapper'
+        offset="500"
+        height="1000"
+        placeholder={<Spinner />}
       >
         <News />
       </LazyLoad>
@@ -34,11 +37,15 @@ const IndexPage = () => {
       <HallOfFame />
       <BecomeMember />
       <ContactSection />
-      <LazyLoad
-        className='lazy-load-news-wrapper'
-      >
-        <Gallery />
-      </LazyLoad>
+      <div id='galeria'>
+        <LazyLoad
+          offset="500"
+          height="1000" 
+        >
+          <Gallery />
+        </LazyLoad>
+      </div>
+
       
       
     

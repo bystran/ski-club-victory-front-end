@@ -23,7 +23,7 @@ const navbar = () => {
             <nav className='bottom-nav-bar'>
                 <Links />
                 <Link
-                    to="#stan-sa-clenom"
+                    to="/#stan-sa-clenom"
                     className="stan-sa-clenom"
                 >
                     <NewMemberIcon />

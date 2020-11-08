@@ -25,10 +25,14 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-image-gallery": "^1.0.8",
+    "react-image-lightbox": "^5.1.1",
     "react-lazy-load": "^3.1.13",
+    "react-lazyload": "^3.0.0",
     "react-moment": "^0.9.7",
+    "react-photo-gallery": "^8.0.0",
     "react-player": "^2.6.1",
     "react-slick": "^0.26.1",
+    "react-spinners": "^0.9.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

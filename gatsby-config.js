@@ -40,7 +40,7 @@ module.exports = {
         queryLimit: 10000, // Default to 100
         contentTypes: [`clen`, `uspech`],
         //If using single types place them in this array.
-        singleTypes: [`domov-prva-stranka`, `domov-stan-sa-viktorakom`, `domov-3-videa`, `kontakt`, `clenovia-stranka`],
+        singleTypes: [`domov-prva-stranka`, `domov-stan-sa-viktorakom`, `domov-3-videa`, `kontakt`, `clenovia-stranka`, 'o-nas'],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
       },
     },

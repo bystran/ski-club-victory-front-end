@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Youtube from '../assets/icons/youtube_icon.svg';
 import Facebook from '../assets/icons/fb_icon.svg';
 import Instagram from '../assets/icons/instagram_icon.svg'
 
@@ -14,11 +13,6 @@ const links = [
         id: 2,
         icon: <Instagram />,
         href: 'https://instagram.com/skiclubvictory',
-    },
-    {
-        id: 3,
-        icon: <Youtube />,
-        href: 'https://youtube.com',
     },
 ] 
 

@@ -4,16 +4,43 @@ import moment from 'moment/min/moment-with-locales';
 import Layout from '../components/layout';
 import BlueMtBG from '../components/BlueMountainBg';
 import MemberCard from '../components/MemberCard';
-import Gallery from 'react-image-gallery';
-
+import SimpleGallery from '../components/SimpleImageGallery';
+import ReactPlayer from 'react-player';
+import ReactGallery from 'react-image-gallery';
 import '../saas/pages/member.scss';
 
 moment.locale("sk");
 
-const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
-
-    
-
+const MemberTemplate = ({data:{file,strapiClen:{name, about, bits, gallery, profile, Slug, birth_date}}}) => {
+    const filterVidoes = (files) => {
+        return files.reduce((acc, item) =>{
+            if(item.mime.slice(0,5) === 'video'){
+                return acc.concat({
+                    video: <ReactPlayer
+                        stopOnUnmount url={`${process.env.GATSBY_BACKEND_SERVER}${item.url}`}
+                        light={file.publicURL} 
+                        playing muted
+                        controls
+                    />
+                });
+            }else{
+                return acc
+            }
+        }, []);
+    }
+    const filterPhotos = (files) => 
+    {
+        return files.reduce( (acc, item) => {
+            if(item.mime.slice(0,5) !== 'video'){
+                return acc.concat({
+                    id: item.id,
+                    src: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                })
+            }else{
+                return acc;
+            }
+        }, [])
+    } 
 
     return (
         <Layout>
@@ -53,20 +80,29 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
             {
                 gallery && gallery.length > 0 &&
                 (
+                    
+                    
                     <div className="member-gallery">
-
-                    <h1>Galéria</h1>
-                    <Gallery 
-                      className="gallery"
-                      lazyLoad={true}
-                      items={gallery.map(item=>{
-                        return {
-                          original: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
-                          thumbnail: `${process.env.GATSBY_BACKEND_SERVER}${item.url}`,
+                        <div className="member-videos">
+                        {
+                            gallery && filterVidoes(gallery).length > 0 &&
+                            ( <h1>Videá</h1> )  
                         }
-                      })}
-                    />
-            </div>
+                        {
+                            gallery &&
+                            filterVidoes(gallery).map( vid => 
+                                vid.video    
+                            )
+                        }   
+                    </div>
+
+                        <h1>Fotky</h1>
+                        <SimpleGallery 
+                            images={filterPhotos(gallery)}
+                        />
+
+                    
+                     </div>
                 )
             }
            
@@ -80,9 +116,13 @@ const MemberTemplate = ({data:{strapiClen:{name, about, bits, gallery, profile, 
 
 export const query = graphql`
     query GetSingleMember($slug: String) {
+        file(relativePath: {eq: "video_default.png"}) {
+            publicURL
+        }
         strapiClen(Slug: {eq: $slug}) {
         name: Meno
         about: OMne
+        birth_date
         bits: Infoska {
             heading: Nadpis
             id
@@ -97,8 +137,10 @@ export const query = graphql`
             }
             ext
             mime
+            id
         }
         profile: Profilova_fotka {
+            publicURL
             img: childImageSharp {
             fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid_withWebp
@@ -107,6 +149,7 @@ export const query = graphql`
         }
         Slug
         }
+
     }
 `
 

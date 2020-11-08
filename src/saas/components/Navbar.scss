@@ -112,7 +112,17 @@
             }
         }
     }
-    @include mq( 'desktop') {
+    @include mq('desktop'){
+        nav.bottom-nav-bar{
+            font-size: 16px;
+            ul{
+                li{
+                    width: 140px;
+                }
+            }
+        }
+    }
+    @include mq( 'desktop-wide') {
         height: 100px;
         .top-nav-bar{
             height: 33px; 
