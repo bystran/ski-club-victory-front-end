@@ -1,6 +1,22 @@
 @import '../../app.scss';
 
-
+.partnery{
+    background: #F5F5F5;
+    padding: 50px 0px;
+    h1{
+        text-align: center;
+    }
+    .partner-logos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+        img{
+            max-height: 90px;
+            width: auto;
+        }
+    }
+}
 .home-section-2{
     padding:100px 0px;
     width: 95%;
